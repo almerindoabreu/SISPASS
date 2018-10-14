@@ -1,13 +1,13 @@
 <?php 
-    require_once("Encarregado.php");
-    require_once("pdo\EncarregadoDao.php");
+    
+require_once("Util\config.php");
 
-    $encarregado = new Encarregado();
+    
+$encarregado = new Encarregado();
+$encarregado->loadById(1);
+echo $encarregado;
 
-    $encarregado->setNome("Claudineia Oliveira");
-    $encarregado->setMatricula("20180123");
-    $encarregado->setTurno("DIURNO 2");
-    $encarregado->setSetor("MPT EQSB");
-    $encarregado->setTelefone("22996141427");
+#$listaEncarregados = Encarregado::getList();
+#echo json_encode($listaEncarregados, JSON_UNESCAPED_UNICODE);
 
-    cadastrar($encarregado);
+?>
